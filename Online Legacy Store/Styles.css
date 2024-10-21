@@ -1,0 +1,268 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+}
+body{
+    background-color:#F0F8FF ;
+    width: 100%;
+}
+/*TITLE STYLE*/
+header{
+    background-color:#00BFFF;
+    padding: 30px;
+    text-align: center;
+    font-size: 1.8vw;
+    color: white;
+}
+h2 {
+	font-size: 25px;
+	padding-bottom: 25px;
+	line-height: 0;
+	color: #09A7BA;
+	font-weight: 300;
+	padding: 20px;
+	padding-top: 40px;
+}
+/*PRODUCTS CARTS*/
+.product_cards{
+    padding: 20px 14px;
+    display: inline-block;
+  } 
+  .product_cards .items{
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 5px;
+      width: 248px;
+      height: 430px;
+      text-align: center;
+      padding: 60px 0;
+      margin: -5px;
+      display: inline-block;
+      border: 1px solid #ddd;
+      vertical-align: middle;
+  }
+  
+  .product_cards .items img{
+      width: 50%;
+      height: 30%;
+  }
+  .product_cards .items:hover {
+      cursor: pointer;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  }
+  .product_cards .items .btn{
+      background-color:#00BFFF;
+      border: none;
+      color: black;
+      font-weight: bold;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      margin: 4px 2px;
+      cursor: pointer;
+      border-radius: 16px;
+  }
+  .product_cards .items .btn:hover{
+      font-size: 16px;
+  }
+  .custom-select{
+      width:200px;
+      display:inline;
+  }
+  .count{
+      width: 30px;
+      text-align: center;
+  }
+  
+/*VIEW CART*/
+table {
+    background: #fff;
+    border-radius: 0.25em;
+    border-collapse: collapse;
+    margin: 1em;
+    width: 97.9%;
+  }
+  th {
+    border-bottom: 1px solid #364043;
+    color: #000;
+    font-size: 0.85em;
+    font-weight: 600;
+    padding: 0.5em 1em;
+    text-align: left;
+  }
+  td {
+    color: #000;
+    font-weight: 400;
+    padding: 0.65em 1em;
+  }
+  
+  .text-danger{
+    display: block;
+    background-color:#f44336;
+    width: 30%;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    margin: 4px;
+    cursor: pointer;
+  }
+  .text-danger:hover{
+    background: #da190b;
+  }
+  .text-success{
+    background-color:#4CAF50;
+    width: 30%;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    margin: 4px;
+    cursor: pointer;
+  }
+  .text-success:hover{
+    background-color: #46a049;
+  }
+  /*FORM STYLE*/
+.container{
+	margin-top: 40px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.container{
+    display: none;
+    background: #fff;
+    width: 410px;
+    padding: 30px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    border: 2px solid #00BFFF;
+}
+/* The Close Button */
+.container .close {
+  position: absolute;
+  right: 20px;
+  margin:2px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+/* Close button on hover */
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+.container .text{
+    font-size: 35px;
+    font-weight: 600;
+    text-align: center;
+}
+.container form{
+    margin-top: -20px;
+}
+.container form .data{
+    height: 45px;
+    width: 100%;
+    margin: 40px 0;
+}
+form .data label{
+    font-size: 18px;
+}
+form .data input{
+    height: 100%;
+    width: 100%;
+    padding-left: 10px;
+    font-size: 17px;
+    border: 1px solid silver;
+}
+form .data input:focus{
+    border-color: #3498db;
+    border-bottom-width: 2px;
+}
+
+form button{
+  background-color: #4CAF50;
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  
+}
+form button:hover{
+    opacity: 0.8;
+}
+/*MEDIA QUERIES FOR LEGACY STORE*/
+@media  screen and (max-width: 481px) {
+  header{
+    font-size:14px ;
+    width: 100%;
+  } 
+  h2{
+    font-size: 23px;
+  }
+  
+  .product_cards #item {
+     width: 200%;
+     height: 550px;
+     margin-left: 1px;
+  }
+  #item img{
+        height: 180px;
+  }
+ .table th{
+   display: none;
+ }
+ .table ,.table tbody,.table tr,.table td{
+   display:block;
+   width:95%;
+ }
+ .table tr{
+   margin-bottom:15px;
+ }
+ .table td{
+   text-align: right;
+   padding-left: 50%;
+   text-align: right;
+   position: relative;
+ }
+ .table td::before{
+   content: attr(data-label);
+   position: absolute;
+   left:0;
+   width: 50%;
+   padding-left: 15px;
+   font-size: 15px;
+   font-weight: bold;
+   text-align:left;
+ }
+ .text-success{
+   margin-top:-60px;
+ }
+ 
+}
+@media screen and (max-width: 768px){
+  
+  .product_cards #item {
+    width: 100%;
+    height: 550px;
+ }
+ #item img{
+  width: 100px;
+  height: 180px;
+}
+	.table {
+          width:97%;
+      }
+  }
